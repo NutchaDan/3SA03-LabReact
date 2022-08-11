@@ -11,11 +11,26 @@ const word5 = "Computer";
 function App() {
   return (
     <div>
-      <WordCard value={word1}/>
-      <WordCard value={word2}/>
-      <WordCard value={word3}/>
-      <WordCard value={word4}/>
-      <WordCard value={word5}/>
+      <span key={word1}>
+        <h2> (1) </h2>
+        <WordCard value={word1}/><br/>
+      </span>
+      <span key={word2}>
+        <h2> (2) </h2>
+        <WordCard value={word2}/><br/>
+      </span>
+      <span key={word3}>
+        <h2> (3) </h2>
+        <WordCard value={word3}/><br/>
+      </span>
+      <span key={word4}>
+        <h2> (4) </h2>
+        <WordCard value={word4}/><br/>
+      </span>
+      <span key={word5}>
+        <h2> (5) </h2>  
+        <WordCard value={word5}/><br/>
+      </span>
     </div>
   );
 }

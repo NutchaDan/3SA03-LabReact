@@ -17,4 +17,16 @@
  h2 {
   padding-top: 10px;
   padding-left: 30px;
+  color: darkred;
+ }
+
+ .refresh {
+  border: 0cm;
+  font-size: 1em;
+  text-align: center;
+  background-color: cornflowerblue;
+  color: ghostwhite;
+  margin: 30px;
+  margin-bottom: 0%;
+  height: 40px;
  }

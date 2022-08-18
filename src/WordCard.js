@@ -30,6 +30,7 @@ export default function WordCard(props){
             if(guess == state.word) {
                 console.log('yeah!');
                 setState({...state, completed: true});
+                <h2> Congratulations! </h2>
                 // <CheckState value={state.completed}/>;
             } else {
                 console.log('reset, next attempt');
@@ -38,7 +39,7 @@ export default function WordCard(props){
         }
 
         // if(state.completed === 'true') {
-        //     return <h1> Congratulations! </h1>
+        //     return <h2> Congratulations! </h2>
         // }
     }
 
@@ -55,6 +56,6 @@ export default function WordCard(props){
 
 // function CheckState() {
 //     if(this.state.value == 'true') {
-//         return <h1> Congratulations! </h1>
+//         return <h2> Congratulations! </h2>
 //     }
 // }

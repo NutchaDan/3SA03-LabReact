@@ -11,6 +11,7 @@ const word5 = "Computer";
 function App() {
   return (
     <div>
+      <button className = 'refresh' onClick={() => window.location.reload()}> Refresh Page </button>
       <span key={word1}>
         <h2> (1) </h2>
         <WordCard value={word1}/><br/>

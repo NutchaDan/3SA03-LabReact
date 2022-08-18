@@ -20,13 +20,23 @@
   color: darkred;
  }
 
+ h3 {
+  padding-top: 10px;
+  padding-left: 30px;
+  margin-bottom: 0%;
+  color: darkred;
+ }
+
  .refresh {
   border: 0cm;
   font-size: 1em;
   text-align: center;
   background-color: cornflowerblue;
   color: ghostwhite;
-  margin: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 10px;
   margin-bottom: 0%;
   height: 40px;
+  position: absolute;
+  right: 30px;
  }

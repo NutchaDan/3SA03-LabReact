@@ -12,23 +12,15 @@ function App() {
   return (
     <div>
       <button className = 'refresh' onClick={() => window.location.reload()}> Refresh Page </button>
-      <span key={word1}>
+      <span>
         <h2> (1) </h2>
         <WordCard value={word1}/><br/>
-      </span>
-      <span key={word2}>
         <h2> (2) </h2>
         <WordCard value={word2}/><br/>
-      </span>
-      <span key={word3}>
         <h2> (3) </h2>
         <WordCard value={word3}/><br/>
-      </span>
-      <span key={word4}>
         <h2> (4) </h2>
         <WordCard value={word4}/><br/>
-      </span>
-      <span key={word5}>
         <h2> (5) </h2>  
         <WordCard value={word5}/><br/>
       </span>

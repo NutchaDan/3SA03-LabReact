@@ -19,6 +19,7 @@ const prepareStateFromWord = given_word => {
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
+    const [completed, setCompleted] = useState("")
 
     const activationHandler = c => {
         console.log(`${c} has been activated`)
@@ -28,19 +29,14 @@ export default function WordCard(props){
 
         if(guess.length == state.word.length) { 
             if(guess == state.word) {
-                console.log('yeah!');
-                setState({...state, completed: true});
-                <h2> Congratulations! </h2>
-                // <CheckState value={state.completed}/>;
+                console.log('yeah!')
+                setState({...state, completed: true})
+                setCompleted("Congratulations!!")
             } else {
-                console.log('reset, next attempt');
-                setState({...state, guess: '', attempt: state.attempt + 1});
+                console.log('reset, next attempt')
+                setState({...state, guess: '', attempt: state.attempt + 1})
             }
         }
-
-        // if(state.completed === 'true') {
-        //     return <h2> Congratulations! </h2>
-        // }
     }
 
     return (
@@ -50,12 +46,14 @@ export default function WordCard(props){
                     <CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>
                 )
             }
+            {
+                completed != "" && (
+                    <span>
+                        <h3> {completed} </h3>
+                        <h3> Answer : {state.word} </h3>
+                    </span>
+                )
+            }
         </div>
     )
 }
-
-// function CheckState() {
-//     if(this.state.value == 'true') {
-//         return <h2> Congratulations! </h2>
-//     }
-// }

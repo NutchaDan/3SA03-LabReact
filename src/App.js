@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <button className = 'refresh' onClick={() => window.location.reload()}> Refresh Page </button>
+      <h1> 6310110139 3SA03 Game Logic </h1>
       <span>
         <h2> (1) </h2>
         <WordCard value={word1}/><br/>

@@ -14,6 +14,13 @@
   background: burlywood;
  }
 
+ h1 {
+  color: cornflowerblue;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 0%;
+ }
+
  h2 {
   padding-top: 10px;
   padding-left: 30px;

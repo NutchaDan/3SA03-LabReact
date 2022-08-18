@@ -10,7 +10,7 @@ const prepareStateFromWord = given_word => {
     return {
         word,
         chars,
-        attempt: 1, //เล่นครั้งที่เท่าไหร่
+        attempt: 0, //เล่นครั้งที่เท่าไหร่
         guess: '', //คลิกไปกี่คำแล้ว
         completed: false
     }
@@ -19,7 +19,7 @@ const prepareStateFromWord = given_word => {
 export default function WordCard(props){
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
-    const [completed, setCompleted] = useState("")
+    const [check, setCheck] = useState("")
 
     const activationHandler = c => {
         console.log(`${c} has been activated`)
@@ -31,10 +31,11 @@ export default function WordCard(props){
             if(guess == state.word) {
                 console.log('yeah!')
                 setState({...state, completed: true})
-                setCompleted("Congratulations!!")
+                setCheck("correct")
             } else {
                 console.log('reset, next attempt')
                 setState({...state, guess: '', attempt: state.attempt + 1})
+                setCheck("wrong")
             }
         }
     }
@@ -47,9 +48,17 @@ export default function WordCard(props){
                 )
             }
             {
-                completed != "" && (
+                check == "wrong" && (
                     <span>
-                        <h3> {completed} </h3>
+                        <h3> You can do it! </h3>
+                        <h3> Attempt : {state.attempt} </h3>
+                    </span>
+                )
+            }
+            {
+                check == "correct" && (
+                    <span>
+                        <h3> Congratulations!! </h3>
                         <h3> Answer : {state.word} </h3>
                     </span>
                 )

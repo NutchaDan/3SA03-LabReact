@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import WordCard from './WordCard';
 
@@ -9,9 +9,31 @@ const word4 = "Keyboard";
 const word5 = "Computer";
 
 function App() {
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    setIsShown(current => !current);
+  };
+
   return (
     <div>
       <button className = 'refresh' onClick={() => window.location.reload()}> Refresh Page </button>
+      <button className = 'rules' onClick={handleClick}>Rules</button>
+
+      {
+        isShown && (
+          <div>
+            <h4>
+              -- Click on each letter and arrange it in the correct words
+            </h4>
+          </div>
+        )
+      }
+      {
+        isShown && <Box />
+      }
+
       <h1> 6310110139 3SA03 Game Logic </h1>
       <span>
         <h2> (1) </h2>
@@ -26,6 +48,12 @@ function App() {
         <WordCard value={word5}/><br/>
       </span>
     </div>
+  );
+}
+
+function Box() {
+  return (
+    <div> </div>
   );
 }
 

@@ -15,7 +15,7 @@
  }
 
  h1 {
-  color: cornflowerblue;
+  color: burlywood;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 0%;
@@ -24,7 +24,7 @@
  h2 {
   padding-top: 10px;
   padding-left: 30px;
-  color: darkred;
+  color: royalblue;
  }
 
  h3 {
@@ -32,6 +32,13 @@
   padding-left: 30px;
   margin-bottom: 0%;
   color: darkred;
+ }
+
+ h4 {
+  padding-left: 63.5em;
+  padding-top: 45px;
+  color: royalblue;
+  position: absolute;
  }
 
  .refresh {
@@ -45,5 +52,19 @@
   margin-bottom: 0%;
   height: 40px;
   position: absolute;
-  right: 30px;
+  right: 10px;
+ }
+
+ .rules {
+  border: 0cm;
+  font-size: 1em;
+  text-align: center;
+  background-color: lightskyblue;
+  color: darkslateblue;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-top: 60px;
+  margin-bottom: 0%;
+  height: 40px;
+  position: absolute;
+  right: 10px;
  }
